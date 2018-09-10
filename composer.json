@@ -1,7 +1,7 @@
 {
   "name": "masugadesign/hvrcraft",
   "description": "This plugin allows the site to relay plugin and update data to hvrcraft.com",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "type": "craft-plugin",
   "minimum-stability": "stable",
   "require": {
