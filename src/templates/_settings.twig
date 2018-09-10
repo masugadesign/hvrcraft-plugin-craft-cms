@@ -1,0 +1,11 @@
+{% import "_includes/forms" as forms %}
+
+
+{{ forms.textField({
+	label:         "Site Key"|t,
+	id:            'siteKey',
+	name:          'siteKey',
+	instructions:  "Enter the site key that was provided at hvrcraft.com. This can be found by visiting the site detail page from your account menu."|t,
+	value:         settings.siteKey,
+	errors:        settings.getErrors('siteKey')
+}) }}

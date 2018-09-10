@@ -1,0 +1,30 @@
+{
+  "name": "masugadesign/hvrcraft",
+  "description": "This plugin allows the site to relay plugin and update data to hvrcraft.com",
+  "version": "1.0.0",
+  "type": "craft-plugin",
+  "minimum-stability": "stable",
+  "require": {
+    "craftcms/cms": "^3.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Masuga\\Hvrcraft\\": "src/"
+    }
+  },
+  "support": {
+    "email": "info@gomasuga.com",
+    "issues": "https://github.com/masugadesign/hvrcraft-craft-plugin/issues?state=open",
+    "source": "https://github.com/masugadesign/hvrcraft-craft-plugin",
+    "docs": "https://github.com/masugadesign/hvrcraft-craft-plugin"
+  },
+  "extra": {
+    "handle": "hvrcraft",
+    "name": "Hvrcraft",
+    "developer": "Masuga Design",
+    "schemaVersion": "1.0.0",
+    "developerUrl": "https://gomasuga.com",
+    "changelogUrl": "https://raw.githubusercontent.com/masugadesign/hvrcraft-craft-plugin/master/CHANGELOG.md",
+	"class": "Masuga\\Hvrcraft\\Hvrcraft"
+  }
+}
