@@ -1,5 +1,7 @@
 # Hvrcraft.com Plugin for Craft CMS
 
+<img src="https://github.com/masugadesign/hvrcraft-plugin-craft-cms/blob/master/src/icon.svg" width="100" height="100">
+
 ### This plugin is under development and should not be installed.
 
 ### Requirements
