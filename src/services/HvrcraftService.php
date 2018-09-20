@@ -33,6 +33,7 @@ class HvrcraftService extends Component
 	{
 		$pluginsService = Craft::$app->getPlugins();
 		$plugins = $pluginsService->getAllPlugins();
+		$craftVersion = (string) Craft::$app->getVersion();
 		$cleaned = [];
 		foreach($plugins as $handle => &$plugin) {
 			$cleaned[$handle] = [
@@ -40,7 +41,8 @@ class HvrcraftService extends Component
 				'description' => $plugin->description,
 				'version' => $plugin->version,
 				'developer' => $plugin->developer,
-				'changelogUrl' => $plugin->changelogUrl
+				'changelogUrl' => $plugin->changelogUrl,
+				'craft' => (int) substr($craftVersion, 0, 1)
 			];
 		}
 		return $cleaned;
@@ -119,8 +121,18 @@ class HvrcraftService extends Component
 			]);
 			$body = (string)$response->getBody();
 		} catch (Exception $e) {
-			//exit("ERROR REQUESTING : {$baseUrl}api/wake-up?key={$siteKey}");
+			$this->log($e->getMessage(), LogLevel::Error);
 		}
+	}
+
+	/**
+	 * This method will log a message to the Hvrcraft plugin log.
+	 * @param string $message
+	 * @param mixed $level
+	 */
+	public function log($message='', $level=LogLevel::Info)
+	{
+		HvrcraftPlugin::log($message, $level);
 	}
 
 }
