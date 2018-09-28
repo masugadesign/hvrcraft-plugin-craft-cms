@@ -59,7 +59,8 @@ class HvrcraftService extends Component
 		$updates = $updatesService->getUpdates();
 		$cleaned = [
 			'cms' => [
-				'version' => Craft::$app->getVersion()
+				'version' => Craft::$app->getVersion(),
+				'edition' => Craft::$app->getEdition()
 			]
 		];
 		// Check for a CMS update.
