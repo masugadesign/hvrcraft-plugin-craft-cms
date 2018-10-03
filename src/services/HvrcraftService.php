@@ -56,7 +56,8 @@ class HvrcraftService extends Component
 	public function getAvailableUpdates()
 	{
 		$updatesService = Craft::$app->getUpdates();
-		$updates = $updatesService->getUpdates();
+		// Boolean "true" parameter forces updates service to refresh the cache.
+		$updates = $updatesService->getUpdates(true);
 		$cleaned = [
 			'cms' => [
 				'version' => Craft::$app->getVersion(),
